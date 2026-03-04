@@ -16,6 +16,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="/assets/styles/mobile.css">
 
     <!-- RS Cards à ajouter -->
 
@@ -28,19 +29,28 @@
     <header class="site-header">
         <div class="container nav">
 
+            <!-- Logo -->
             <div class="logo">
-               <a href="/" aria-label="Retour à l’accueil">
-                <img 
-                    src="./assets/images/logo.jpg" 
-                    alt="Logo Gautier - Service Public Local de l'Énergie"
-                    title="Retour à l'accueil"
-                > 
-            </a>
+                <a href="/" aria-label="Retour à l’accueil">
+                    <img 
+                        src="./assets/images/logo.jpg" 
+                        alt="Logo Gautier - Service Public Local de l'Énergie"
+                        title="Retour à l'accueil"
+                    > 
+                </a>
             </div>
 
+            <!-- Hamburger pour mobile -->
+            <div class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation -->
             <nav aria-label="Navigation principale">
                 <ul class="nav-list">
-                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="/pages/apropos.html">À propos</a></li>
                     <li><a href="#missions">Missions</a></li>
                     <li><a href="/pages/publications.html">Publications</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -182,7 +192,11 @@
 
                 <header class="section-header">
                     <h2>Me contacter</h2>
+                    <p>Pour toutes demandes d’informations, n’hésitez pas à utiliser le formulaire ci-dessous ou à m’écrire à 
+                        <a href="mailto:adresse@mail.fr" class="adresse-mail">adresse@mail.fr</a>.
+                    </p>
                 </header>
+
 
                 <form class="contact-form" action="#" method="post">
 

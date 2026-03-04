@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--text);
     line-height: 1.6;
@@ -215,7 +219,7 @@ nav a:hover::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.96);
     z-index: 0;
 }
 
@@ -360,6 +364,8 @@ nav a:hover::after {
     100% { transform: translateX(-50%); }
 }
 
+/* CONTACT*/
+
 .contact-section {
     position: relative;
     padding: 7rem 0;
@@ -367,14 +373,17 @@ nav a:hover::after {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 180%;
+    
 }
 
 .contact-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.96);
     z-index: 0;
+ 
+    
 }
 
 .contact-wrapper {
@@ -382,12 +391,19 @@ nav a:hover::after {
     z-index: 1;
 }
 
+.contact-wrapper .section-header {
+    margin-bottom: 2rem;
+}
+
+.adresse-mail {
+    color: var(--green);
+}
+
 .contact-form {
-    max-width: 950px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
 .form-row {
@@ -423,7 +439,6 @@ textarea {
 
 input:focus,
 textarea:focus {
-    background: #a8cfa8;
     border-color: var(--green);
 }
 
