@@ -178,20 +178,43 @@ nav a:hover::after {
     box-shadow: 0 15px 30px rgba(39, 118, 39, 0.50);
 }
 
-.partner-logos {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
+.partner-logos-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
-.logo-box {
-    flex: 1;
-    min-width: 120px;
+.partner-logos {
+    display: flex;
+    gap: 2rem; /* gap fixe entre les cartes */
+    animation: scroll-left 25s linear infinite;
+    align-items: center;
+}
+
+.partner-logos .logo-box {
+    flex: 0 0 auto; 
     text-align: center;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-logos .logo-box img {
+    max-height: 60px;
+    max-width: 150px; 
+    object-fit: contain;
+}
+
+/* Hover effet "lift" */
+.partner-logos .logo-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Animation du scroll */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* CONTACT */
