@@ -41,6 +41,7 @@ h2 {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
     margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -201,22 +202,112 @@ nav a:hover::after {
 /* MISSIONS */
 
 .missions {
-    margin: 5rem auto;
+    position: relative;
+    padding: 7rem 0;
+    background-image: url("../images/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 180%;
+    width: 100%;
 }
 
-.mission-item {
+.missions::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 0;
+}
+
+.missions .container {
+    position: relative;
+    z-index: 1;
+}
+
+.missions-list {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
 }
 
-.icon {
-    width: 70px;
-    height: 70px;
-    background: var(--green);
+.mission {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    transition: all 0.3s ease;
+}
+
+.mission-icon {
+    position: relative;
+    min-width: 120px;
+    height: 120px;
     border-radius: 50%;
-    flex-shrink: 0;
+    background-color: var(--green);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    transition: all 0.3s ease;
+}
+
+/* Deuxième bordure externe */
+.mission-icon::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 3px solid var(--green);
+    transition: all 0.3s ease;
+}
+
+.mission:nth-child(1) .mission-icon {
+    background-image: url("../images/missions/1.png");
+}
+
+.mission:nth-child(2) .mission-icon {
+    background-image: url("../images/missions/2.png");
+}
+
+.mission:nth-child(3) .mission-icon {
+    background-image: url("../images/missions/3.png");
+}
+
+.mission:nth-child(4) .mission-icon {
+    background-image: url("../images/missions/4.png");
+}
+
+.mission:nth-child(5) .mission-icon {
+    background-image: url("../images/missions/5.png");
+}
+
+.mission-content h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.mission-content p {
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* HOVER */
+
+.mission:hover .mission-icon {
+    background-color: var(--violet);
+}
+
+.mission:hover .mission-icon::after {
+    border-color: var(--violet);
+}
+
+.mission:hover .mission-content h3,
+.mission:hover .mission-content p {
+    color: var(--violet);
+    cursor: pointer;
 }
 
 /* PARTNERS */
@@ -226,6 +317,7 @@ nav a:hover::after {
     padding: 3rem 2rem;
     border-radius: 20px;
     margin-bottom: 5rem;
+    margin-top: 5rem;
     box-shadow: 0 15px 30px rgba(39, 118, 39, 0.50);
 }
 
@@ -237,7 +329,7 @@ nav a:hover::after {
 
 .partner-logos {
     display: flex;
-    gap: 2rem; /* gap fixe entre les cartes */
+    gap: 2rem; 
     animation: scroll-left 25s linear infinite;
     align-items: center;
 }
