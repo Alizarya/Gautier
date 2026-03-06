@@ -61,24 +61,61 @@ h3 {
     height: 80px;
     border-bottom: 3px solid var(--green);
     display: flex;
+    position: fixed;   
+    top: 0;           
+    left: 0;
+    width: 100%;      
+    z-index: 9999;     
 }
 
-.logo img{
+#main-content {
+    padding-top: 80px; 
+}
+
+.logo a {
+    display: inline-block;
+    position: relative;
     width: 70px;
     height: 70px;
-    margin-top: 20%;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    transition: opacity 0.3s ease;
+}
+
+.logo .logo-hover {
+    opacity: 0; 
+}
+
+.logo a:hover .logo-hover {
+    opacity: 1; 
+}
+
+.logo a:hover .logo-default {
+    opacity: 0; 
+}
+
+nav {
+    margin-left: auto; 
+    display: flex;
+    gap: 2em; 
 }
 
 .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
+
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 3em;
 }
 
 nav a {

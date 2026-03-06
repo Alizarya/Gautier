@@ -31,17 +31,14 @@
 
             <!-- Logo -->
             <div class="logo">
-                <a href="/" aria-label="Retour à l’accueil">
-                    <img 
-                        src="./assets/images/logo.jpg" 
-                        alt="Logo Gautier - Service Public Local de l'Énergie"
-                        title="Retour à l'accueil"
-                    > 
+                <a href="/" aria-label="Retour à l’accueil" title="Retour à l'accueil">
+                    <img class="logo-default" src="./assets/images/gautier.png" alt="Logo Gautier - Service Public Local de l'Énergie">
+                    <img class="logo-hover" src="./assets/images/gautiervert.png" alt="Logo Gautier - Service Public Local de l'Énergie">
                 </a>
             </div>
 
-            <!-- Hamburger pour mobile -->
-            <div class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <!-- Hamburger -->
+            <div class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -57,6 +54,8 @@
                 </ul>
             </nav>
 
+            <!-- Overlay -->
+            <div class="nav-overlay"></div>
         </div>
     </header>
 
@@ -71,7 +70,7 @@
             <div class="hero-card">
 
                 <figure class="hero-image">
-                    <img src="/assets/images/portrait.jpg" alt="Portrait de Gautier">
+                    <img src="/assets/images/gautiervert.png" alt="Portrait de Gautier">
                 </figure>
 
                 <div class="hero-content">
@@ -288,5 +287,6 @@
 </script>
 
 <script src="./assets/scripts/logo-partenaires.js"></script>
+<script src="./assets/scripts/nav-mobile.js"></script>
 
 </html>

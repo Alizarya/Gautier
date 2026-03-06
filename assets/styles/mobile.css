@@ -1,10 +1,19 @@
 @media (max-width: 48em) {
 
-    /* HEADER */
+    /* ----------------- */
+    /* HEADER & NAVBAR    */
+    /* ----------------- */
     .site-header {
         flex-direction: column;
         height: auto;
         padding: 0.5rem 1rem;
+    }
+
+    .site-header .nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
     }
 
@@ -12,32 +21,14 @@
         display: none;
     }
 
-    .nav {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        display: none; 
-    }
-
-    nav a {
-        display: block;
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-
+    /* Hamburger */
     .hamburger {
         display: block;
         cursor: pointer;
         width: 30px;
         height: 25px;
         position: relative;
+        z-index: 101;
     }
 
     .hamburger span {
@@ -49,12 +40,71 @@
         transition: 0.3s ease;
     }
 
-    /* quand le menu est ouvert */
-    .nav.active ul {
+    /* Navigation menu */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 4rem 2rem;
         display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 100;
     }
 
-    /* HERO */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        color: var(--green);
+        font-weight: 700;
+        text-align: left;
+    }
+
+    /* Overlay */
+    .nav-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 99;
+    }
+
+    /* Menu actif */
+    .nav.active nav {
+        right: 0;
+    }
+
+    .nav.active .nav-overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Hamburger → croix */
+    .nav.active .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav.active .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav.active .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ----------------- */
+    /* HERO              */
+    /* ----------------- */
     .hero-card {
         flex-direction: column;
         gap: 1rem;
@@ -64,6 +114,7 @@
     .hero-image img {
         max-height: 200px;
         width: 100%;
+        object-fit: cover;
     }
 
     .hero-content h1 {
@@ -75,9 +126,12 @@
         width: 100%;
         padding: 1rem;
         font-size: 1rem;
+        margin-top: 1rem;
     }
 
-    /* MISSIONS */
+    /* ----------------- */
+    /* MISSIONS          */
+    /* ----------------- */
     .missions-list {
         gap: 2rem;
         margin-top: 2rem;
@@ -88,6 +142,10 @@
         align-items: center;
         text-align: center;
         gap: 1rem;
+    }
+
+    .missions, .contact-section {
+        background-image: none; 
     }
 
     .mission-icon {
@@ -103,7 +161,9 @@
         font-size: 0.85rem;
     }
 
-    /* PARTNERS */
+    /* ----------------- */
+    /* PARTNERS          */
+    /* ----------------- */
     .partner-logos {
         gap: 1rem;
     }
@@ -112,7 +172,9 @@
         padding: 0.5rem;
     }
 
-    /* CONTACT */
+    /* ----------------- */
+    /* CONTACT           */
+    /* ----------------- */
     .contact-form .form-row {
         flex-direction: column;
         gap: 0.8rem;
@@ -124,7 +186,9 @@
         padding: 1rem;
     }
 
-    /* FOOTER */
+    /* ----------------- */
+    /* FOOTER            */
+    /* ----------------- */
     .site-footer .footer-content {
         flex-direction: column;
         gap: 1rem;
