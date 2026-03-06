@@ -543,3 +543,60 @@ textarea:focus {
     text-align: right;
 }
 
+
+
+/* MENTIONS LEGALES */
+
+.legal-page {
+    padding: 5rem 0;
+}
+
+.legal-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 15px 30px rgba(39, 118, 39, 0.25);
+}
+
+.legal-card h1 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.legal-section {
+    margin-bottom: 2.5rem;
+}
+
+.legal-section h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+.legal-section h3 {
+    margin-top: 2rem;
+ 
+}
+
+.legal-section p {
+    margin-bottom: 1rem;
+}
+
+.legal-section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-section li {
+    margin-bottom: 0.4rem;
+}
+
+.legal-section a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
