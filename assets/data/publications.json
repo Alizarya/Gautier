@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Test PDF",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Image.jpg",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "pdf": "../assets/data/publications/PDF.pdf"
+  }
+]
