@@ -198,4 +198,58 @@
     .footer-left, .footer-center, .footer-right {
         text-align: center;
     }
+
+    /* ----------------- */
+    /* PUBLICATIONS            */
+    /* ----------------- */
+    .publications-page {
+    padding: 3rem 0;
+  }
+
+  .publications-page h1 {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  .publications-list {
+    gap: 1.5rem;
+  }
+
+  /* CARD EN COLONNE */
+  .publication-card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  /* IMAGE EN HAUT */
+  .publication-card img {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* CONTENU */
+  .publication-content {
+    padding: 1.2rem;
+  }
+
+  .publication-content h2 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .publication-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  .publication-content .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .publications-plus {
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
 }
