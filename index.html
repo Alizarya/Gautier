@@ -46,17 +46,22 @@
             <!-- Logo -->
             <div class="logo">
                 <a href="/" aria-label="Retour à l’accueil" title="Retour à l'accueil">
-                    <img class="logo-default" src="./assets/images/gautier.png" alt="Logo Gautier - Service Public Local de l'Énergie">
-                    <img class="logo-hover" src="./assets/images/gautiervert.png" alt="Logo Gautier - Service Public Local de l'Énergie">
+                    <img class="logo-default" src="./assets/images/gautier.webp" alt="Logo Gautier - Service Public Local de l'Énergie">
+                    <img class="logo-hover" src="./assets/images/gautiervert.webp" alt="Logo Gautier - Service Public Local de l'Énergie">
                 </a>
             </div>
 
             <!-- Hamburger -->
-            <div class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button 
+                class="hamburger" 
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </button>
 
             <!-- Navigation -->
             <nav aria-label="Navigation principale">
@@ -84,7 +89,7 @@
             <div class="hero-card">
 
                 <figure class="hero-image">
-                    <img src="/assets/images/gautiervert.png" alt="Portrait de Gautier">
+                    <img src="/assets/images/gautiervert.webp" alt="Portrait de Gautier">
                 </figure>
 
                 <div class="hero-content">
@@ -224,7 +229,7 @@
 
                 <header class="section-header">
                     <h2>Me contacter</h2>
-                    <p>Pour toutes demandes d’informations, n’hésitez pas à utiliser le formulaire ci-dessous ou à m’écrire à 
+                    <p>Pour toutes demandes, n’hésitez pas à utiliser le formulaire ci-dessous ou à m’écrire à 
                         <a href="mailto:gautier.moreau@g-esplen.fr" class="adresse-mail">gautier.moreau@g-esplen.fr</a>.
                     </p>
                 </header>
@@ -267,8 +272,16 @@
                     </div>
 
                     <button type="submit" class="btn-primary">
-                        Envoyer
+                        <span class="btn-text">Envoyer</span>
                     </button>
+
+                    <!-- Zone message accessible -->
+                    <p 
+                        class="form-status" 
+                        role="status" 
+                        aria-live="polite" 
+                        aria-atomic="true"
+                    ></p>
 
                 </form>
 

@@ -11,7 +11,7 @@ fetch("../assets/data/publications.json")
                 <img src="${pub.image}" alt="${pub.title}">
                 
                 <div class="publication-content">
-                    <h3>${pub.title}</h3>
+                    <h2>${pub.title}</h2>
                     <p>${pub.text || ""}</p>
 
                     <a href="${pub.pdf}" target="_blank" class="btn-primary">
